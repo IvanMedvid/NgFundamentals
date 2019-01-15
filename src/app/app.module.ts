@@ -8,7 +8,9 @@ import { EventThumbnailComponent } from './events/event-thumbnail.component';
 import { NavBarComponent } from './nav/nav-bar.component';
 import { EventService } from './events/shared/event.service';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
-
+import { CreateEventComponent } from './events/create-event.component';
+import { NotFoundComponent } from './errors/not-found.component';
+import { EventRouteActivator } from './events/event-route-activator.service';
 
 @NgModule({
   declarations: [
@@ -16,17 +18,28 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
     EventsListComponent,
     EventThumbnailComponent,
     EventDetailsComponent,
-    NavBarComponent
+    NavBarComponent,
+    CreateEventComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [ 
-    EventService
+    EventService,
+    EventRouteActivator,
+    {provide: 'canDeactivateCreateEvent', useValue: checkDirtyState }
    ],
   bootstrap: [
     EventsAppComponent
   ]
 })
 export class AppModule { }
+
+export function checkDirtyState(component: CreateEventComponent){
+  if(component.isDurty){
+    return window.confirm('You have not saved this event, do you really want to cancel?')
+  }
+  return true;
+}
