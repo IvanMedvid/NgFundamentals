@@ -9,6 +9,7 @@ import { NavBarComponent } from './nav/nav-bar.component';
 import { EventService } from './events/shared/event.service';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
 
+
 @NgModule({
   declarations: [
     EventsAppComponent,
