@@ -10,6 +10,12 @@ export class EventService{
       return subject;
     }
 
+    saveEvent(event){
+      event.id = 999;
+      event.sessions = [];
+      EVENTS.push(event);
+    }
+
     getEvent(id:number): IEvent{
       return EVENTS.find(event => event.id === id);
     }
