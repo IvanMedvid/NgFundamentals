@@ -18,6 +18,7 @@ import { NotFoundComponent } from './errors/not-found.component';
 import { EventsAppComponent } from './events-app.component';
 import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CollabsibleWellComponent } from './events/common/collabsible-well.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CreateEventComponent,
     NotFoundComponent,
     CreateSessionComponent,
-    SessionListComponent
+    SessionListComponent,
+    CollabsibleWellComponent
   ],
   imports: [
     BrowserModule,
