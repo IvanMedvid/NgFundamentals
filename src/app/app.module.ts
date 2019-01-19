@@ -11,7 +11,8 @@ import {
   EventRouteActivator,
   EventListResolver,
   CreateSessionComponent,
-  SessionListComponent
+  SessionListComponent,
+  DurationPipe
 } from './events/index';
 import { NavBarComponent } from './nav/nav-bar.component';
 import { NotFoundComponent } from './errors/not-found.component';
@@ -31,7 +32,8 @@ import { CollabsibleWellComponent } from './events/common/collabsible-well.compo
     NotFoundComponent,
     CreateSessionComponent,
     SessionListComponent,
-    CollabsibleWellComponent
+    CollabsibleWellComponent,
+    DurationPipe
   ],
   imports: [
     BrowserModule,
