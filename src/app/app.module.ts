@@ -20,8 +20,10 @@ import { AuthService } from './user/auth.service';
 import { TOASTR_TOKEN, Toastr } from './events/common/toastr.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CollabsibleWellComponent } from './events/common/collabsible-well.component';
+import { JQ_TOKEN } from './events/common/jQuery.service';
 
-declare let toastr: Toastr;
+let toastr: Toastr;
+let jQuery = window['$'];
 
 @NgModule({
   declarations: [
@@ -48,6 +50,7 @@ declare let toastr: Toastr;
     EventListResolver,
     AuthService,
     {provide: TOASTR_TOKEN, useValue: toastr},
+    {provide: JQ_TOKEN, useValue: jQuery},
     {provide: 'canDeactivateCreateEvent', useValue: checkDirtyState }
    ],
   bootstrap: [
