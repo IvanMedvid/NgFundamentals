@@ -41,11 +41,14 @@ let jQuery = window['$'];
     SessionListComponent,
     CollabsibleWellComponent,
     SimpleModalComponent,
+    ModalTriggerDirective,
+    DurationPipe
   ],
   imports: [
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    BrowserModule
   ],
   providers: [ 
     EventService,
