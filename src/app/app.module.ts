@@ -8,14 +8,14 @@ import {
   EventDetailsComponent,
   CreateEventComponent,
   EventService,
-  EventRouteActivator,
   EventListResolver,
   CreateSessionComponent,
   SessionListComponent,
   DurationPipe,
   UpvoteComponent,
   VoterService,
-  LocationValidatorDirective
+  LocationValidatorDirective,
+  EventResolverService
 } from './events/index';
 import { NavBarComponent } from './nav/nav-bar.component';
 import { NotFoundComponent } from './errors/not-found.component';
@@ -59,7 +59,7 @@ let jQuery = window['$'];
   ],
   providers: [ 
     EventService,
-    EventRouteActivator,
+    EventResolverService,
     EventListResolver,
     AuthService,
     VoterService,

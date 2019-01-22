@@ -5,7 +5,7 @@ import {
   EventsListComponent,
   EventDetailsComponent,
   CreateEventComponent,
-  EventRouteActivator,
+  EventResolverService,
   EventListResolver,
   CreateSessionComponent
 } from './events/index';
@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'events/session/new', component: CreateSessionComponent},
   { path:'events', component: EventsListComponent, resolve: 
     { events: EventListResolver } },
-  { path: 'events/:id', component: EventDetailsComponent, canActivate: [EventRouteActivator]},
+  { path: 'events/:id', component: EventDetailsComponent, resolve: {event: EventResolverService}},
   { path: 'notfound', component: NotFoundComponent},
   { path: '', redirectTo: '/events', pathMatch: 'full'},
   { path: 'user', loadChildren: '../app/user/user.module#UserModule'}
