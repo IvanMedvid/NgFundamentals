@@ -27,6 +27,7 @@ import { CollabsibleWellComponent } from './common/collabsible-well.component';
 import { JQ_TOKEN } from './common/jQuery.service';
 import { SimpleModalComponent } from './common/simple-modal.component';
 import { ModalTriggerDirective } from './common/modal-trigger.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 let toastr: Toastr;
 let jQuery = window['$'];
@@ -53,7 +54,8 @@ let jQuery = window['$'];
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule, 
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [ 
     EventService,
