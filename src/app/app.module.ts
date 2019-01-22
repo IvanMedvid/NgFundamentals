@@ -14,7 +14,8 @@ import {
   SessionListComponent,
   DurationPipe,
   UpvoteComponent,
-  VoterService
+  VoterService,
+  LocationValidatorDirective
 } from './events/index';
 import { NavBarComponent } from './nav/nav-bar.component';
 import { NotFoundComponent } from './errors/not-found.component';
@@ -45,7 +46,8 @@ let jQuery = window['$'];
     SimpleModalComponent,
     ModalTriggerDirective,
     DurationPipe,
-    UpvoteComponent
+    UpvoteComponent,
+    LocationValidatorDirective
   ],
   imports: [
     AppRoutingModule,
