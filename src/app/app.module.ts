@@ -29,7 +29,7 @@ import { SimpleModalComponent } from './common/simple-modal.component';
 import { ModalTriggerDirective } from './common/modal-trigger.directive';
 import { HttpClientModule } from '@angular/common/http';
 
-let toastr: Toastr;
+declare let toastr: Toastr;
 let jQuery = window['$'];
 
 @NgModule({
