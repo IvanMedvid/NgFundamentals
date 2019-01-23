@@ -17,7 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         ReactiveFormsModule,
         RouterModule.forChild(userRoutes)
     ],
-    providers: [ 
+    providers: [
     ]
   })
   export class UserModule { }

@@ -12,19 +12,19 @@ import { ISession, EventService } from '../events';
         li > a.active { color: #F97924; }
     `]
 })
-export class NavBarComponent{
+export class NavBarComponent {
     serchTerm: string;
     foundSessions: ISession[];
 
-    constructor(public auth:AuthService, public eventService: EventService){
-        
+    constructor(public auth: AuthService, public eventService: EventService) {
+
     }
 
-    searchSession(searchTerm){
+    searchSession(searchTerm) {
         this.eventService.searchSession(searchTerm).subscribe(sessions => {
             this.foundSessions = sessions;
         });
-        
+
     }
 }
 

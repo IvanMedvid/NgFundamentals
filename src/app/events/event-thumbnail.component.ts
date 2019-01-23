@@ -1,9 +1,9 @@
-import { Component, Input} from '@angular/core'
+import { Component, Input} from '@angular/core';
 import { IEvent } from './shared';
 
 @Component({
     selector : 'event-thumbnail',
-    templateUrl : 'event-thumbnail.component.html', 
+    templateUrl : 'event-thumbnail.component.html',
     styles : [
         `
         .thumbnail { min-height: 210px; }
@@ -13,6 +13,6 @@ import { IEvent } from './shared';
     ]
 })
 
-export class EventThumbnailComponent{
+export class EventThumbnailComponent {
     @Input() event: IEvent;
 }

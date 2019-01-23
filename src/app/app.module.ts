@@ -30,7 +30,7 @@ import { ModalTriggerDirective } from './common/modal-trigger.directive';
 import { HttpClientModule } from '@angular/common/http';
 
 declare let toastr: Toastr;
-let jQuery = window['$'];
+const jQuery = window['$'];
 
 @NgModule({
   declarations: [
@@ -53,11 +53,11 @@ let jQuery = window['$'];
   imports: [
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule, 
+    ReactiveFormsModule,
     BrowserModule,
     HttpClientModule
   ],
-  providers: [ 
+  providers: [
     EventService,
     EventResolverService,
     EventListResolver,
@@ -73,9 +73,9 @@ let jQuery = window['$'];
 })
 export class AppModule { }
 
-export function checkDirtyState(component: CreateEventComponent){
-  if(component.isDurty){
-    return window.confirm('You have not saved this event, do you really want to cancel?')
+export function checkDirtyState(component: CreateEventComponent) {
+  if (component.isDurty) {
+    return window.confirm('You have not saved this event, do you really want to cancel?');
   }
   return true;
 }

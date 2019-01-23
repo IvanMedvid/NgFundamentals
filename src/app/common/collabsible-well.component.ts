@@ -6,9 +6,9 @@ import { Component, Input } from '@angular/core';
 })
 
 export class CollabsibleWellComponent {
-    visible: boolean = true;
+    visible = true;
 
-    toggleContent(){
+    toggleContent() {
         this.visible = !this.visible;
     }
 }

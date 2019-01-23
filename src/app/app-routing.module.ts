@@ -13,7 +13,7 @@ import {
 const routes: Routes = [
   { path: 'events/new', component: CreateEventComponent, canDeactivate: ['canDeactivateCreateEvent']},
   { path: 'events/session/new', component: CreateSessionComponent},
-  { path:'events', component: EventsListComponent, resolve: 
+  { path: 'events', component: EventsListComponent, resolve:
     { events: EventListResolver } },
   { path: 'events/:id', component: EventDetailsComponent, resolve: {event: EventResolverService}},
   { path: 'notfound', component: NotFoundComponent},

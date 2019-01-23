@@ -3,22 +3,22 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({ name : 'duration' })
 
 export class DurationPipe implements PipeTransform {
-    transform(value: number): string{
+    transform(value: number): string {
         switch (value) {
             case 1:
-                return 'Half Hour'
+                return 'Half Hour';
                 break;
             case 2:
-                return 'One Hour'
+                return 'One Hour';
                 break;
             case 3:
-                return 'Half Day'
+                return 'Half Day';
                 break;
             case 4:
-                return 'Full Day'
+                return 'Full Day';
                 break;
             default:
-                return value.toString()
+                return value.toString();
             break;
         }
     }

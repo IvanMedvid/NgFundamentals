@@ -14,20 +14,20 @@ import { EventService } from './shared';
   `]
 })
 export class CreateEventComponent {
-  newEvent
-  isDurty: boolean = true;
-  constructor(private router:Router, private eventService: EventService){
+  newEvent;
+  isDurty = true;
+  constructor(private router: Router, private eventService: EventService) {
 
   }
 
-  saveEvent(formValues){
+  saveEvent(formValues) {
     this.eventService.saveEvent(formValues).subscribe(() => {
       this.isDurty = false;
       this.router.navigate(['/events']);
     });
   }
 
-  close(){
+  close() {
     this.router.navigate(['/events']);
   }
 }
