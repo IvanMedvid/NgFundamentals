@@ -16,7 +16,7 @@ export class SimpleModalComponent {
     @Input() title: string;
     @Input() elementId: string;
     @Input() closeOnBodyClick: string;
-    @ViewChild('modalContainer') containerEl: ElementRef;
+    @ViewChild('modalContainer', { static: true }) containerEl: ElementRef;
 
     constructor(@Inject(JQ_TOKEN) private $: any) {
 
