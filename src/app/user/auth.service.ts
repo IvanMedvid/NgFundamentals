@@ -3,6 +3,7 @@ import { IUser } from './user.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { tap, catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
+import { LoginModel } from "./user.model";
 
 @Injectable()
 export class AuthService {
@@ -11,11 +12,10 @@ export class AuthService {
     constructor(private http: HttpClient) {
     }
 
-    loginUser(userName: string, password: string) {
-        const loginInfo = { username : userName, password: password};
+    loginUser(loginModel: LoginModel) {
         const options = { headers : new HttpHeaders({'Content-Type' : 'application/json'})};
 
-        return this.http.post('/api/login', loginInfo, options)
+        return this.http.post('/api/login', loginModel, options)
             .pipe(tap(data => {
                 this.currentUser = <IUser>data['user'];
             }))
